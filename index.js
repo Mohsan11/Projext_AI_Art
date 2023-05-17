@@ -3,6 +3,10 @@ const dotenv = require("dotenv").config();
 const Port = process.env.PORT || 5000;
 const app = express();
 const path = require("path");
+const cors = require("cors");
+//Enable CORS
+app.use(express.json());
+app.use(cors());
 
 //Enable body parser
 app.use(express.json());
